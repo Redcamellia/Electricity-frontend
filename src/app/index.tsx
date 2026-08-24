@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 import { Uniwind } from "uniwind";
+import Button from "../components/Button/Button";
 
 export default function Index() {
   Uniwind.setTheme("ocean");
@@ -8,6 +9,11 @@ export default function Index() {
       <Text className="text-center text-primary text-2xl">
         Edit app/index.tsx to edit this screen.
       </Text>
+      <Button className="max-w-[50%] self-center rounded-2xl">
+        <Text className="text-xl text-center text-primary">
+          this is a button
+        </Text>
+      </Button>
     </View>
   );
 }
