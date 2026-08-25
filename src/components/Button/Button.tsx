@@ -7,7 +7,7 @@ import { ButtonProps } from "./Button.types";
 export default function Button({ onPress, children, className }: ButtonProps) {
   return (
     <Pressable
-      className={cn("border-1 border-green-200 bg-card p-2", className)}
+      className={cn("border-1 border-border bg-card p-2", className)}
       onPress={onPress}
     >
       {children}
