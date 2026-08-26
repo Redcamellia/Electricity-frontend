@@ -10,7 +10,12 @@ export default function index() {
         please log in to your account
       </Text>
       <View className="flex-row gap-4 justify-center">
-        <Button className="rounded-2xl px-4">
+        <Button
+          onPress={() => {
+            router.navigate("/requestLogin/login");
+          }}
+          className="rounded-2xl px-4"
+        >
           <Text className="text-primary text-xl ">Login</Text>
         </Button>
         <Button

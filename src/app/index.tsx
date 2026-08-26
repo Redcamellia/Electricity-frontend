@@ -4,7 +4,7 @@ import { Uniwind } from "uniwind";
 import Button from "../components/Button/Button";
 
 export default function Index() {
-  Uniwind.setTheme("sunset");
+  Uniwind.setTheme("ocean");
   return (
     <View className="border-1 flex-1  border-border bg-background">
       <Text className="text-center text-primary text-2xl">Welcome</Text>
