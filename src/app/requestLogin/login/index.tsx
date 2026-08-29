@@ -1,5 +1,6 @@
 import Button from "@/src/components/Button/Button";
 import ElectricInput from "@/src/components/ElectricInput";
+import { setItem } from "@/src/utils/utils";
 import axios from "axios";
 import { router } from "expo-router";
 import React, { useState } from "react";
@@ -39,7 +40,12 @@ export default function index() {
               email: emailValue,
               password: passwordValue,
             });
-            setToken(response.data.token);
+            if (response.data.token) {
+              setToken(response.data.token);
+              setItem("token", token);
+              setItem("email", emailValue);
+              router.navigate("/user");
+            }
           }}
           className="rounded-3xl"
         >
@@ -54,7 +60,6 @@ export default function index() {
           <Text className="text-2xl text-primary mx-6 my-1 ">Cancel</Text>
         </Button>
       </View>
-      <Text className="text-4xl">{token}</Text>
     </View>
   );
 }

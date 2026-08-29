@@ -10,4 +10,5 @@ export async function getConnectionInstance() {
       Authorization: getItem("token"),
     },
   });
+  return instance;
 }
