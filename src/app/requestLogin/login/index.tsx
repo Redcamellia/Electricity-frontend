@@ -1,5 +1,5 @@
 import Button from "@/src/components/Button/Button";
-import ElectricInput from "@/src/components/Button/ElectricInput";
+import ElectricInput from "@/src/components/ElectricInput";
 import axios from "axios";
 import { router } from "expo-router";
 import React, { useState } from "react";

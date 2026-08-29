@@ -17,6 +17,16 @@ export default function Index() {
       >
         <Text className="text-xl text-center text-primary">Proceed</Text>
       </Button>
+      <Button
+        className="max-w-[50%] self-center rounded-2xl mt-4"
+        onPress={() => {
+          router.navigate("/examples/postexample");
+        }}
+      >
+        <Text className="text-xl text-center text-foreground">
+          post example
+        </Text>
+      </Button>
     </View>
   );
 }
