@@ -8,6 +8,7 @@ export default function ElectricInput({
   inputMode,
   value,
   placeholder,
+  secureTextEntry,
   onChangeText,
 }: TextInputProps) {
   const placeholderColor = useCSSVariable("--color-primary");
@@ -18,6 +19,7 @@ export default function ElectricInput({
         "bg-card border-1 border-border text-2xl px-4 rounded-3xl text-foreground ",
         className,
       )}
+      secureTextEntry={secureTextEntry}
       inputMode={inputMode}
       value={value}
       placeholder={placeholder}

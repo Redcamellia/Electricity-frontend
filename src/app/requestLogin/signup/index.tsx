@@ -35,6 +35,7 @@ export default function index() {
           onChangeText={setNameValue}
         />
         <ElectricInput
+          secureTextEntry={true}
           inputMode="text"
           textContentType="password"
           value={passwordValue}

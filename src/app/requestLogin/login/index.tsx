@@ -25,6 +25,8 @@ export default function index() {
           onChangeText={setEmailValue}
         />
         <ElectricInput
+          secureTextEntry={true}
+          textContentType="password"
           placeholder="password"
           value={passwordValue}
           onChangeText={setPasswordValue}
