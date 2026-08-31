@@ -12,14 +12,14 @@ export default function Post({
 }) {
   return (
     <View className="w-[90%] w-max-[560px] bg-border self-center py-6 px-4 rounded-2xl shadow-2xl">
-      <View className="mb-4 flex-row gap-6 justify-between items-center">
+      <View className=" flex-row gap-2 justify-between items-center">
         <View className="flex-row gap-2 items-center">
-          <View className="w-12 h-12 rounded-full bg-amber-300 border-1 border-amber-50"></View>
+          <View className="w-12 h-12 rounded-full bg-amber-300 border-2 border-amber-50"></View>
           <Text className="text-2xl text-foreground">{username}</Text>
         </View>
-        <Text className="text-2xl text-foreground">{title}</Text>
       </View>
-      <Text className="text-xl text-foreground">{content}</Text>
+      <Text className="text-xl text-foreground text-center mb-6">{title}</Text>
+      <Text className="text-lg text-foreground">{content}</Text>
     </View>
   );
 }
