@@ -42,7 +42,7 @@ export default function index() {
             });
             if (response.data.token) {
               setToken(response.data.token);
-              setItem("token", token);
+              setItem("token", response.data.token);
               setItem("email", emailValue);
               router.navigate("/user");
             }

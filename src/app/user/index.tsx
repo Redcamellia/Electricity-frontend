@@ -20,16 +20,13 @@ export default function index() {
     async function getPosts() {
       const conn = await getConnectionInstance();
       const email = getItem("email");
-      console.log("i am requesting the backend");
       const result = await conn.get(`${baseUrl}posts/by-email`, {
         params: {
           email: email,
         },
       });
       const postsvalue = result.data;
-      console.log("i got the posts from backend");
       setValue(postsvalue);
-      console.log(postsvalue);
       return result;
     }
     getPosts();

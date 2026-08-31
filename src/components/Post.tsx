@@ -14,7 +14,7 @@ export default function Post({
     <View className="w-[90%] w-max-[560px] bg-border self-center py-6 px-4 rounded-2xl shadow-2xl">
       <View className=" flex-row gap-2 justify-between items-center">
         <View className="flex-row gap-2 items-center">
-          <View className="w-12 h-12 rounded-full bg-amber-300 border-2 border-amber-50"></View>
+          <View className="w-12 h-12 rounded-full bg-amber-200 border-1 border-amber-50"></View>
           <Text className="text-2xl text-foreground">{username}</Text>
         </View>
       </View>
