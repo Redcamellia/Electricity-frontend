@@ -44,7 +44,8 @@ export default function index() {
               setToken(response.data.token);
               setItem("token", response.data.token);
               setItem("email", emailValue);
-              router.navigate("/user");
+              router.dismiss(1);
+              router.replace("/user");
             }
           }}
           className="rounded-3xl"

@@ -1,8 +1,11 @@
+import Button from "@/src/components/Button/Button";
 import Post from "@/src/components/Post";
 import { getConnectionInstance } from "@/src/utils/connection";
 import { getItem } from "@/src/utils/utils";
+import { router } from "expo-router";
+import { setItem } from "expo-secure-store";
 import React, { useEffect, useState } from "react";
-import { Platform, View } from "react-native";
+import { Platform, Text, View } from "react-native";
 
 type Post = {
   id: number;
@@ -33,7 +36,17 @@ export default function index() {
   }, []);
 
   return (
-    <View className="flex-1 bg-background gap-4 pt-8">
+    <View className="flex-1 bg-background gap-2 pt-8">
+      <Button
+        onPress={() => {
+          setItem("token", "");
+          setItem("email", "");
+          router.dismissTo("/");
+        }}
+        className="bg-red-300 rounded-2xl w-24 self-center"
+      >
+        <Text className="text-center">log out</Text>
+      </Button>
       {value.map((single) => {
         return (
           <Post

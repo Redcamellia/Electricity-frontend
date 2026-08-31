@@ -8,12 +8,9 @@ export default function index() {
   useEffect(() => {
     const token = getItem("token");
     if (token) {
-      console.log(`token is available : ${token}`);
       router.replace("/user");
     }
   }, []);
-  console.log("token: ", getItem("token"));
-  console.log("email: ", getItem("email"));
   return (
     <View className="flex-1 bg-background">
       <Text className="text-center text-2xl text-foreground my-8">
